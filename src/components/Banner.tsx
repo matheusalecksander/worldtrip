@@ -1,4 +1,4 @@
-import { useBreakpointValue, Box, Flex, SimpleGrid, Text } from '@chakra-ui/react'
+import { useBreakpointValue, Box, Flex, Text } from '@chakra-ui/react'
 
 export function Banner() {
   const isWideVersion = useBreakpointValue({
@@ -9,6 +9,7 @@ export function Banner() {
   return (
     <Box
       bgImage="url('/images/background.png')"
+      bgSize="cover"
       bgRepeat="no-repeat"
       w="100%"
       h={isWideVersion ? 300 : 165}
@@ -27,11 +28,11 @@ export function Banner() {
           h={isWideVersion ? "300px" : "165px"}
           flex={1}
         >
-          <Text fontSize="2xl" fontWeight="medium" color="gray.200" >
+          <Text fontFamily="Poppins" fontSize="2xl" fontWeight="medium" color="gray.200" >
             5 Continentes,
             <Text>infinitas possibilidades.</Text>
           </Text>
-          <Text fontWeight="regular" color="gray.400" >
+          <Text fontFamily="Poppins" fontWeight="regular" color="gray.400" >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
         </Flex>
